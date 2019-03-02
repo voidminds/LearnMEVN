@@ -1,5 +1,11 @@
 <% include partials/header %>
-
+<style>
+div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+</style>
 <div>
     <ul>
         <li><a href="/avenger/ironman">IronMan</a></li>
@@ -10,5 +16,10 @@
         <li><a href="/avenger/hawkeye">Hawkeye</a></li>
     </ul>
 </div>
+<h1>ADD NEW AVENGER</h1>
+<form action="/addavenger" method="POST">
+    <input type="text" name="newavenger">
+    <button>ADD</button>
+</form>
 
 <% include partials/footer %>
