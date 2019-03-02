@@ -7,7 +7,7 @@ app.get("/",function(req,res){
     // res.send("<h1>Welcome to Home Page</h1>");
 });
 
-app.get("/avenger",function(req,res){
+app.get("/avengers",function(req,res){
     res.render("avengers.ejs");
 });
 
@@ -27,7 +27,10 @@ app.get("/avenger/:names",function(req,res){
 
 
 
-
+// Unvalid routes 
+app.get("*",function(req,res){
+    res.render("error.ejs");
+});
 
 
 //Listening at port 3000
