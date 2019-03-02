@@ -1,20 +1,22 @@
 var express = require('express');
 var app = express();
 
+app.use(express.static("public"));
+app.set("view engine","ejs");
 // Root Route (home)
 app.get("/",function(req,res){
-    res.render("home.ejs");
+    res.render("home");
     // res.send("<h1>Welcome to Home Page</h1>");
 });
 
 app.get("/avengers",function(req,res){
-    res.render("avengers.ejs");
+    res.render("avengers");
 });
 
 // Passing parameter in render()
 app.get("/avenger/:names",function(req,res){
     var name = req.params.names;
-    res.render("avenger.ejs",{avname:name});
+    res.render("avenger",{avname:name});
     // res.send("Avenger Name : "+name);
 });
 
@@ -29,7 +31,7 @@ app.get("/avenger/:names",function(req,res){
 
 // Unvalid routes 
 app.get("*",function(req,res){
-    res.render("error.ejs");
+    res.render("error");
 });
 
 
