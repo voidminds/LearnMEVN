@@ -16,11 +16,6 @@ app.get("/avengers",function(req,res){
     res.render("avengers");
 });
 
-app.post("/addavenger",function(req,res){
-    var newAvenger = req.body.newavenger;
-    res.redirect("avengers");
-});
-
 // Passing parameter in render()
 app.get("/avenger/:names",function(req,res){
     var name = req.params.names;

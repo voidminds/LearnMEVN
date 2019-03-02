@@ -1,0 +1,10 @@
+<h1>Avengers</h1>
+
+<% avengers.forEach(function(newavenger){ %>
+    <li><%= newavenger %></li>
+<% }); %>
+
+<form action="/addavenger" method="POST">
+    <input type="text" name="newavenger">
+    <button>ADD</button>
+</form>
