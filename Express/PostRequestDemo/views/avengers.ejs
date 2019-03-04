@@ -1,0 +1,36 @@
+<style>
+div{
+    border:purple 2px solid;
+    display: block;
+    width: 600px;
+}
+.result{
+    width: 900px;
+
+}
+</style>
+
+<h1>Avengers</h1>
+
+<div>
+<form action="/addavenger" method="POST">
+    <div>
+        <label for="name">Enter Avenger Name:</label>
+        <input type="text" id="name" name="newavenger">
+    </div>
+    <div>
+        <label for="img">Enter Image URL:</label>
+        <input type="text" id="img" name="newavenger_img">
+    </div>
+    <button>ADD</button>
+</form>
+</div>
+
+
+<% avengers.forEach(function(newavenger){ %>
+    <div class="result">
+        <a><%= newavenger.name %></li></a>
+        <img src="<%= newavenger.img_src %>" alt="">
+    </div>
+    
+<% }); %>

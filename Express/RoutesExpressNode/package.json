@@ -1,0 +1,14 @@
+{
+  "name": "routes_express_node",
+  "version": "1.0.0",
+  "description": "Routes in Express and Node",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Vinod Patidar",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
