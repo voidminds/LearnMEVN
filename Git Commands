@@ -9,3 +9,4 @@ git config --global user.name "TejsinghDhaosriya"
 6) git push origin master
 7) git clone repoName
 8)git pull origin master
+9)j git clone "link"
