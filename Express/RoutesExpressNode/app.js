@@ -11,12 +11,12 @@ app.get("/speak/pig",function(req,res){
     res.send("The pig says 'Oink'");
 });
 
-// Visiting '/speak/pig should print "The cow says 'Moo'"
+// Visiting '/speak/cow should print "The cow says 'Moo'"
 app.get("/speak/cow",function(req,res){ 
     res.send("The Cow says 'Moo'");
 });
 
-// Visiting '/speak/pig should print "The dog says 'Woof Woof'"
+// Visiting '/speak/dog should print "The dog says 'Woof Woof'"
 app.get("/speak/dog",function(req,res){ 
     res.send("The Dog says 'Woof Woof'");
 });
