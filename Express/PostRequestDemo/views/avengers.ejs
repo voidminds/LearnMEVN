@@ -1,14 +1,3 @@
-<style>
-div{
-    border:purple 2px solid;
-    display: block;
-    width: 600px;
-}
-.result{
-    width: 900px;
-
-}
-</style>
 
 <h1>Avengers</h1>
 
@@ -25,12 +14,13 @@ div{
     <button>ADD</button>
 </form>
 </div>
-
-
-<% avengers.forEach(function(newavenger){ %>
-    <div class="result">
-        <a><%= newavenger.name %></li></a>
-        <img src="<%= newavenger.img_src %>" alt="">
+<div class="container">
+    <div class="row">
+            <% avengers.forEach(function(newavenger){ %>
+        <div class="col-4">
+            <a><%= newavenger.name %></li></a>
+            <img src="<%= newavenger.img_src %>" alt="">
+        </div>
+        <% }); %>
     </div>
-    
-<% }); %>
+</div>
