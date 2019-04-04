@@ -2,7 +2,7 @@ git config --global user.email "tejsinghdhaosriya@gmail.com"
 git config --global user.name "TejsinghDhaosriya"
 
 1)git init 
-2)git add[filename] !! -A
+2)git add[filename] || -A
 3) git status
 4)git commit -m "msg"
 5)git remote add origin repoName
