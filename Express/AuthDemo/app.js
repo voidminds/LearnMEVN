@@ -5,15 +5,19 @@ var express = require('express'),
     User = require('./models/user'),
     LocalStrategy = require('passport-local'),
     passportLocalMongoose = require('passport-local-mongoose');
-    routes = require('./routes');
+routes = require('./routes');
 
 // Connect to database
-mongoose.connect('mongodb://localhost/auth_demo',{useNewUrlParser:true});
+mongoose.connect('mongodb://localhost/auth_demo', {
+    useNewUrlParser: true
+});
 
 var app = express();
-app.set('view engine','ejs');
+app.set('view engine', 'ejs');
 app.use(express.static(__dirname + "/public"));
-app.use(bodyParser.urlencoded({extended:true}));
+app.use(bodyParser.urlencoded({
+    extended: true
+}));
 // Adding express-session
 app.use(require('express-session')({
     secret: "We are using express session",
@@ -35,6 +39,6 @@ passport.deserializeUser(User.deserializeUser());
 
 app.use(routes);
 
-app.listen(9000,(req,res) => {
+app.listen(9000, (req, res) => {
     console.log("Server started at 9000");
 });
